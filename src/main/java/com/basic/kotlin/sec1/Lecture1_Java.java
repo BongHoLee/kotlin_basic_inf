@@ -1,4 +1,4 @@
-package com.basic.kotlin;
+package com.basic.kotlin.sec1;
 
 public class Lecture1_Java {
     public static void main(String[] args) {

@@ -1,4 +1,6 @@
-package com.basic.kotlin;
+package com.basic.kotlin.sec1;
+
+import com.basic.kotlin.Person;
 
 public class Lecture2_Java {
     public static void main(String[] args) {
