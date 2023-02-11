@@ -1,4 +1,4 @@
-package com.basic.kotlin.sec3
+package com.basic.kotlin
 
 fun main() {
     val person = Person("lee", 100)
@@ -7,15 +7,15 @@ fun main() {
     println(person.name)
 }
 
-class Person(
-    name: String,
+class Person {
     var age: Int
-) {
-    // 생성자가 호출되는 시점(객체 생성 시점)에 한 번 호출되는 init block
-    init {
+
+    constructor(name: String, age: Int) {
+        this.age = age
         if (age <= 0) {
             throw IllegalArgumentException("나이는 ${age}일 수 없습니다.")
         }
+        this.name = name
     }
 
     constructor(name: String) : this(name, 10)
@@ -24,6 +24,6 @@ class Person(
         get() = this.age >= 20
 
     // custom getter backing field - get() 무한 재귀 방지
-    val name: String = name
+    val name: String
         get() = field.uppercase()
 }
