@@ -1,18 +1,16 @@
 package com.basic.kotlin.sec3.lec10
 
 open class Base(
-    open var number: Int = 100
+    open val number: Int
 ) {
     init {
         println("Base Class")
-        println(number)
-        number = 200
         println(number)
     }
 }
 
 class Derived(
-    override var number: Int
+    number: Int
 ) : Base(number) {
 
     init {
